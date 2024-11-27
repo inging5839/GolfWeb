@@ -1,0 +1,178 @@
+{% extends "./base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <div class="Main">
+        {% if user.is_authenticated %}
+                {% comment %} ----------------- 1번방 -----------------{% endcomment %}
+                <div class="Room-Box">            
+                    <p class="Room-Title">Room 1 {{current_reservation_1}}</p><hr>
+                    <div class="User-Name">
+                        <p class="Reservation-Time-Text">현재 이용자</p>
+                        {% if current_reservation_1 %}
+                            <p>{{current_reservation_1.name}}님 ({{current_reservation_1.home}})</p>
+                        {% else %}
+                            <p>없음</p>
+                        {% endif %}
+                    </div>
+                    <div class="Reservation-Time">
+                        <p class="Reservation-Time-Text">이용시작 / 이용종료</p>
+                        <p>{{current_reservation_1.time}}</p>
+                    </div>
+                    <hr>           
+                    <div class="Next-User">
+                        <p>다음 예약자</p>
+                        {% if next_reservation_1 %} 
+                            <p>{{next_reservation_1.name}}님 ({{next_reservation_1.home}})</p>
+                        {% else %}
+                            <p>다음 예약이 없습니다.</p>
+                        {% endif %}
+                    </div>
+                    <div class="Reservation-Time">
+                        <p>이용시작 / 이용종료</p>
+                        <p>{{next_reservation_1.time}}</p>
+                    </div>
+                        
+                    {% comment %} <div class="User-Change">
+                        <button>다음 예약자 입장 완료</button>
+                    </div> {% endcomment %}
+                </div>
+                {% comment %} ----------------- 2번방 -----------------{% endcomment %}
+                <div class="Room-Box">            
+                    <p class="Room-Title">Room 2</p><hr>
+                    <div class="User-Name">
+                        <p class="Reservation-Time-Text">현재 이용자</p>
+                        {% if current_reservation_2 %}
+                            <p>{{current_reservation_2.name}}님 ({{current_reservation_2.home}})</p>
+                        {% else %}
+                            <p>없음</p>
+                        {% endif %}
+                    </div>
+                    <div class="Reservation-Time">
+                        <p class="Reservation-Time-Text">이용시작 / 이용종료</p>
+                        <p>{{current_reservation_2.time}}</p>
+                    </div>
+                    <hr>           
+                    <div class="Next-User">
+                        <p>다음 예약자</p>
+                        {% if next_reservation_2 %} 
+                            <p>{{next_reservation_2.name}}님 ({{next_reservation_2.home}})</p>
+                        {% else %}
+                            <p>다음 예약이 없습니다.</p>
+                        {% endif %}
+                    </div>
+                    <div class="Reservation-Time">
+                        <p>이용시작 / 이용종료</p>
+                        <p>{{next_reservation_2.time}}</p>
+                    </div>
+                        
+                    {% comment %} <div class="User-Change">
+                        <button>다음 예약자 입장 완료</button>
+                    </div> {% endcomment %}
+                </div>
+                {% comment %} ----------------- 3번방 -----------------{% endcomment %}
+                <div class="Room-Box">            
+                    <p class="Room-Title">Room 3</p><hr>
+                    <div class="User-Name">
+                        <p class="Reservation-Time-Text">현재 이용자</p>
+                        {% if current_reservation_3 %}
+                            <p>{{current_reservation_3.name}}님 ({{current_reservation_3.home}})</p>
+                        {% else %}
+                            <p>없음</p>
+                        {% endif %}
+                    </div>
+                    <div class="Reservation-Time">
+                        <p class="Reservation-Time-Text">이용시작 / 이용종료</p>
+                        <p>{{current_reservation_3.time}}</p>
+                    </div>
+                    <hr>           
+                    <div class="Next-User">
+                        <p>다음 예약자</p>
+                        {% if next_reservation_3 %} 
+                            <p>{{next_reservation_3.name}}님 ({{next_reservation_3.home}})</p>
+                        {% else %}
+                            <p>다음 예약이 없습니다.</p>
+                        {% endif %}
+                    </div>
+                    <div class="Reservation-Time">
+                        <p>이용시작 / 이용종료</p>
+                        <p>{{next_reservation_3.time}}</p>
+                    </div>
+                        
+                    {% comment %} <div class="User-Change">
+                        <button>다음 예약자 입장 완료</button>
+                    </div> {% endcomment %}
+                </div>
+                {% comment %} ----------------- 4번방 -----------------{% endcomment %}
+                <div class="Room-Box">            
+                    <p class="Room-Title">Room 4</p><hr>
+                    <div class="User-Name">
+                        <p class="Reservation-Time-Text">현재 이용자</p>
+                        {% if current_reservation_4 %}
+                            <p>{{current_reservation_4.name}}님 ({{current_reservation_4.home}})</p>
+                        {% else %}
+                            <p>없음</p>
+                        {% endif %}
+                    </div>
+                    <div class="Reservation-Time">
+                        <p class="Reservation-Time-Text">이용시작 / 이용종료</p>
+                        <p>{{current_reservation_4.time}}</p>
+                    </div>
+                    <hr>           
+                    <div class="Next-User">
+                        <p>다음 예약자</p>
+                        {% if next_reservation_4 %} 
+                            <p>{{next_reservation_4.name}}님 ({{next_reservation_4.home}})</p>
+                        {% else %}
+                            <p>다음 예약이 없습니다.</p>
+                        {% endif %}
+                    </div>
+                    <div class="Reservation-Time">
+                        <p>이용시작 / 이용종료</p>
+                        <p>{{next_reservation_4.time}}</p>
+                    </div>
+                        
+                    {% comment %} <div class="User-Change">
+                        <button>다음 예약자 입장 완료</button>
+                    </div> {% endcomment %}
+                </div>
+                {% comment %} ----------------- 5번방 -----------------{% endcomment %}
+                <div class="Room-Box">            
+                    <p class="Room-Title">Room 5</p><hr>
+                    <div class="User-Name">
+                        <p class="Reservation-Time-Text">현재 이용자</p>
+                        {% if current_reservation_5 %}
+                            <p>{{current_reservation_5.name}}님 ({{current_reservation_5.home}})</p>
+                        {% else %}
+                            <p>없음</p>
+                        {% endif %}
+                    </div>
+                    <div class="Reservation-Time">
+                        <p class="Reservation-Time-Text">이용시작 / 이용종료</p>
+                        <p>{{current_reservation_5.time}}</p>
+                    </div>
+                    <hr>           
+                    <div class="Next-User">
+                        <p>다음 예약자</p>
+                        {% if next_reservation_5 %} 
+                            <p>{{next_reservation_5.name}}님 ({{next_reservation_5.home}})</p>
+                        {% else %}
+                            <p>다음 예약이 없습니다.</p>
+                        {% endif %}
+                    </div>
+                    <div class="Reservation-Time">
+                        <p>이용시작 / 이용종료</p>
+                        <p>{{next_reservation_5.time}}</p>
+                    </div>
+                        
+                    {% comment %} <div class="User-Change">
+                        <button>다음 예약자 입장 완료</button>
+                    </div> {% endcomment %}
+                </div>
+        {% else %}
+            <a href="{% url "account_login" %}">로그인</a>
+            <a href="{% url "account_signup" %}">회원가입</a>
+        {% endif %}
+    </div>
+{% endblock content %}

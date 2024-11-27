@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+.Title {
+  display: flex;
+  margin-left: 0px;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  line-height: 75px;
+
+}
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #27374D;
+  font-family: 'Titillium Web';
+  margin: 0 auto;
+  height: 75px;
+}
+
+.Header .Title-Text {
+  color: #DDE6ED;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.Header .Now-Time {
+  color: #DDE6ED;
+  font-size: 25px;
+  font-weight: 700;
+  margin-right: 30px;
+
+}
+
+.Header .User-Status {
+  color: #DDE6ED;
+  font-size: 15px;
+  margin: 0 20px;
+}
+
+.Header img {
+  height: 30px;
+}
+
+/* -------- 헤더 부분 종료 --------- */
+
+/* -------- 메인 구역 시작 --------- */
+
+
+.Room-Box {
+  background-color: #DDE6ED;
+  border-radius: 30px;
+  line-height: 24px;
+  font-size: 18px;
+  color: #526D82;
+  width: 640px;
+  margin: 50px auto;
+  padding: 20px 50px 20px 50px;
+}
+
+
+.Room-Title {
+  margin: 0;
+  font-weight: bold;
+  color: #27374D;
+}
+
+.Room-Box .Reservation-Time {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px
+}
+
+.Room-Box .User-Name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;  
+}
+.Room-Box .Game-End-Time {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.Room-Box .Next-User {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.Room-Box .User-Change {
+  display: flex;
+  justify-content: flex-end;
+}
+.Room-Box .User-Change button {
+  background-color: #526D82; 
+  border: 3px solid transparent;
+  border-radius: 16px;
+  font-size: 15px;
+  color: white;
+  padding: 5px 20px;
+}
+
+#clock {
+    position: absolute;
+    top: 180px;
+    left: 40px;
+    font-size: 40px;
+    color: #27374D;
+    text-align: center;
+    background-color: #DDE6ED;
+    border: 3px solid #dde6ed;
+    border-radius: 20px;
+    width: 200px;
+    
+}
+
